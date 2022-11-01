@@ -1,0 +1,30 @@
+.calculator-body {
+    display: flex;
+    border: 1px solid black;
+    background-color: rgba(131, 131, 131, 0.533);
+    width: max-content;
+    height: auto;
+    margin: auto;
+}
+
+.display {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+    font-size: 46px;
+    border-bottom: 1px solid black;
+}
+
+.numbers {
+
+}
+
+button {
+    margin: 5px;
+    font-size: 30px;
+}
+
+button:hover {
+    cursor: pointer;
+}
