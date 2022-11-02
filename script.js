@@ -1,14 +1,18 @@
+const display = document.getElementById('display')
+const numKeys = document.getElementsByClassName('btn-number')
+
+
 const add = (a,b) => a + b;
-console.log(add(5,10))
+// console.log(add(5,10))
 
 const subtract = (a,b) => a - b;
-console.log(subtract(20,10))
+// console.log(subtract(20,10))
 
 const multiply = (a,b) => a * b;
-console.log(multiply(3,3))
+// console.log(multiply(3,3))
 
 const divide = (a, b) => a / b;
-console.log(divide(100,5))
+// console.log(divide(100,5))
 
 function operate(num1, num2, operator) {
     switch (operator) {
@@ -22,3 +26,11 @@ function operate(num1, num2, operator) {
         return divide(num1, num2);
     }
   };
+
+const pressedButtons = () => {
+  console.log(`This button is working ` + numKeys[num.value])
+}
+
+for (num of numKeys) {
+  num.addEventListener('click', pressedButtons);
+}
