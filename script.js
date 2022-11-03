@@ -1,6 +1,7 @@
+// All my buttons
 const display = document.getElementById('display')
 const numKeys = document.getElementsByClassName('btn-number')
-
+const clear = document.getElementById('btn-clear')
 
 const add = (a,b) => a + b;
 // console.log(add(5,10))
@@ -25,12 +26,21 @@ function operate(num1, num2, operator) {
       case "/":
         return divide(num1, num2);
     }
-  };
+};
 
+// Adding the clicked numbers to my display
 const pressedButtons = (e) => {
   console.log('This button works ' + e.target.textContent)
+  display.textContent = e.target.textContent
+}
+// Clearing displaying
+const clearDisplay = () => {
+  display.textContent = '0'
 }
 
+// Using a for loop to grab each of my number keys
 for (num of numKeys) {
   num.addEventListener('click', pressedButtons);
 }
+// EventListeners
+clear.addEventListener('click', clearDisplay)
