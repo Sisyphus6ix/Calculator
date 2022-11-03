@@ -27,8 +27,8 @@ function operate(num1, num2, operator) {
     }
   };
 
-const pressedButtons = () => {
-  console.log(`This button is working ` + numKeys[num.value])
+const pressedButtons = (e) => {
+  console.log('This button works ' + e.target.textContent)
 }
 
 for (num of numKeys) {
