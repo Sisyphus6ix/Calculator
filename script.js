@@ -28,19 +28,26 @@ function operate(num1, num2, operator) {
     }
 };
 
+// Giving the user the default value of an empty string
+let userInput = ''
+
 // Adding the clicked numbers to my display
-const pressedButtons = (e) => {
-  console.log('This button works ' + e.target.textContent)
-  display.textContent = e.target.textContent
+const chosenNum = (e) => {
+  userInput = userInput + e.target.textContent
+  const parsedValue = parseInt(userInput, 10)
+  display.textContent = parsedValue 
 }
+
 // Clearing displaying
 const clearDisplay = () => {
+  userInput = ''
   display.textContent = '0'
 }
 
 // Using a for loop to grab each of my number keys
 for (num of numKeys) {
-  num.addEventListener('click', pressedButtons);
+  num.addEventListener('click', chosenNum);
 }
+
 // EventListeners
 clear.addEventListener('click', clearDisplay)
