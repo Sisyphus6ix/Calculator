@@ -35,7 +35,12 @@ let userInput = ''
 const chosenNum = (e) => {
   userInput = userInput + e.target.textContent
   const parsedValue = parseInt(userInput, 10)
-  display.textContent = parsedValue 
+  
+  if (userInput.length > 8){
+    // do nothing (8 digit limit)
+  } else {
+   display.innerHTML = parsedValue
+  }
 }
 
 // Clearing displaying
