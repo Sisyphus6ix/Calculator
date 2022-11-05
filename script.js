@@ -38,6 +38,11 @@ let userInput = ''
 // Adding the clicked numbers to my display
 const chosenNum = (e) => {
   userInput = userInput + e.target.textContent
+ // if the first inputed number is 0 then it wont take a spot in the display
+  if (userInput[0] === '0'){
+    userInput = ''
+  }
+
   const num1 = Number(userInput)
 
   if (userInput.length > 8){
