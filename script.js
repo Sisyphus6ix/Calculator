@@ -8,18 +8,13 @@ const multiplyKey = document.getElementsByClassName('btn-operator')[0]
 const divideKey = document.getElementsByClassName('btn-operator')[4]
 const calculate = document.getElementsByClassName('btn-operator')[3]
 
+// Mathmatic expressions
 const add = (a, b) => parseFloat(a) + parseFloat(b);
-// console.log(add(5,10))
-
 const subtract = (a, b) => parseFloat(a) - parseFloat(b);
-// console.log(subtract(20,10))
-
 const multiply = (a, b) => parseFloat(a) * parseFloat(b);
-// console.log(multiply(3,3))
-
 const divide = (a, b) => parseFloat(a) / parseFloat(b);
-// console.log(divide(100,5))
 
+// Function for choosing which expression to apply to the numbers
 function operate(num1, num2, operator) {
     switch (operator) {
       case '+':
@@ -55,7 +50,7 @@ const chosenNum = (e) => {
    display.textContent = Number(chosenNumInput)
   }
 }
-
+// Creating function create num1 and choose the operator and store those values
 const operation = (e) => {
     num1 = display.textContent
     parseInt(num1)
@@ -64,7 +59,7 @@ const operation = (e) => {
     console.log(operator)
     userInput = ''
 }
-
+// Function for creating num2 once the equal sign is pressed and then calculating num1 and num2
  const result = () => {
     num2 = display.textContent
     parseInt(num2)
@@ -75,18 +70,12 @@ const operation = (e) => {
     userInput = ''
 }
 
-
-
 // Clearing displaying
 const clearDisplay = () => {
   userInput = ''
   display.textContent = '0'
-  num1 = false
-  num2 = false
-}
-
-const test = () => {
-  console.log('this button works')
+  num1 = undefined
+  num2 = undefined
 }
 
 // Using a for loop to grab each of my number keys
