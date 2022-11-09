@@ -8,12 +8,17 @@
     <title>Calculator</title>
 </head>
 <body>
+<div class="header">
+    <h1>My version of the Apple Calculator :)</h1>
+</div>
+
     <div class="calculator-body">
         <div class="calculator">
             <div id="display">0</div>
                 <div class="numbers">
                 <div class="row">
                     <button id="btn-clear">C</button>
+                    <button class="btn-operator">/</button>
                 </div>
                 <div class="row">
                     <button class="btn-number">7</button>
@@ -37,11 +42,19 @@
                     <button class="btn-number">0</button>
                     <button class="btn-number">.</button>
                     <button class="btn-operator">=</button>
-                    <button class="btn-operator">/</button>
                 </div>
                 </div>
         </div>
     </div>
+<div class="footer">
+    <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+        <a href="https://github.com/Sisyphus6ix">Sisyphus6ix</a>
+    </p>
+</div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -2,11 +2,11 @@
 const display = document.getElementById('display')
 const clear = document.getElementById('btn-clear')
 const numKeys = document.getElementsByClassName('btn-number')
-const addKey = document.getElementsByClassName('btn-operator')[2]
-const subtractKey = document.getElementsByClassName('btn-operator')[1]
-const multiplyKey = document.getElementsByClassName('btn-operator')[0]
-const divideKey = document.getElementsByClassName('btn-operator')[4]
-const calculate = document.getElementsByClassName('btn-operator')[3]
+const addKey = document.getElementsByClassName('btn-operator')[3]
+const subtractKey = document.getElementsByClassName('btn-operator')[2]
+const multiplyKey = document.getElementsByClassName('btn-operator')[1]
+const divideKey = document.getElementsByClassName('btn-operator')[0]
+const calculate = document.getElementsByClassName('btn-operator')[4]
 
 // Mathmatic expressions
 const add = (a, b) => parseFloat(a) + parseFloat(b);
@@ -44,13 +44,13 @@ const chosenNum = (e) => {
 
   const chosenNumInput = userInput
   
-  if (userInput.length > 8){
+  if (userInput.length > 7){
     // do nothing (8 digit limit)
   } else {
    display.textContent = Number(chosenNumInput)
   }
 }
-// Creating function create num1 and choose the operator and store those values
+// Function to store num1 and the operator
 const operation = (e) => {
     num1 = display.textContent
     parseInt(num1)
